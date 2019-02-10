@@ -1,0 +1,28 @@
+{
+  "name": "django-boilerplate",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "css-compile": "node-sass root/static/scss -o root/static/css",
+    "css-watch": "node-sass root/static/scss -o root/static/css --watch",
+    "browser-sync": "browser-sync start --files \"root/static/css/*.css, root/static/js/*.js, root/**/*.py, root/templates/*.html\" --proxy 127.0.0.1:8000 --reload-delay=300 --reload-debounce=500",
+    "start": "concurrently --kill-others \"npm run css-watch\" \"python manage.py runserver\" \"npm run browser-sync\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeBlakeway/django-boilerplate.git"
+  },
+  "author": "Mike Blakeway",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikeBlakeway/django-boilerplate/issues"
+  },
+  "homepage": "https://github.com/MikeBlakeway/django-boilerplate#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.1.0",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {},
+  "description": ""
+}
