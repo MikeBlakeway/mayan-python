@@ -43,7 +43,7 @@ npm run start
 
 ## Authors
 
-* **Mike Blakeway** - *Technical Director* - [Blue Moon](https://github.com/MikeBlakeway)
+**Mike Blakeway** - *Technical Director* - [Blue Moon](https://github.com/MikeBlakeway)
 
 
 ## License
