@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/MikeBlakeway/django-boilerplate#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.7",
     "concurrently": "^4.1.0",
     "node-sass": "^4.11.0"
   },
