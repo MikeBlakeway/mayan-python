@@ -1,28 +1,27 @@
 {
-  "name": "django-boilerplate",
+  "name": "mayanwebstudio",
   "version": "1.0.0",
-  "main": "app.js",
+  "description": "A simple Django project boilerplate with Sass 7-1 architecture, compiler and live reload via BrowserSync",
+  "main": "index.js",
   "scripts": {
-    "css-compile": "node-sass root/static/scss -o root/static/css",
-    "css-watch": "node-sass root/static/scss -o root/static/css --watch",
-    "browser-sync": "browser-sync start --files \"root/static/css/*.css, root/static/js/*.js, root/**/*.py, root/templates/*.html\" --proxy 127.0.0.1:8000 --reload-delay=300 --reload-debounce=500",
-    "start": "concurrently --kill-others \"npm run css-watch\" \"python manage.py runserver\" \"npm run browser-sync\" "
+    "css-compile": "node-sass main/static/main/scss -o main/static/main/css",
+    "css-watch": "node-sass main/static/main/scss -o main/static/main/css --watch",
+    "browser-sync": "browser-sync start --files \"main/static/main/css/*.css, main/static/main/js/*.js, main/**/*.py, main/templates/*.html\" --proxy 127.0.0.1:8000",
+    "start": "concurrently --kill-others \"npm run css-watch\" \"npm run browser-sync\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MikeBlakeway/django-boilerplate.git"
+    "url": "git+https://github.com/MikeBlakeway/mayanwebstudio.git"
   },
   "author": "Mike Blakeway",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MikeBlakeway/django-boilerplate/issues"
+    "url": "https://github.com/MikeBlakeway/mayanwebstudio/issues"
   },
-  "homepage": "https://github.com/MikeBlakeway/django-boilerplate#readme",
+  "homepage": "https://github.com/MikeBlakeway/mayanwebstudio#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "concurrently": "^4.1.0",
-    "node-sass": "^4.11.0"
-  },
-  "dependencies": {},
-  "description": ""
+    "concurrently": "^4.1.1",
+    "node-sass": "^4.12.0"
+  }
 }

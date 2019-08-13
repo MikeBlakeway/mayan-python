@@ -27,8 +27,6 @@ var/
 wheels/
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -40,6 +38,8 @@ pip-delete-this-directory.txt
 *.log
 local.py
 .vscode
+.env
+Procfile
 
 # virtualenv
 .venv/
@@ -48,6 +48,7 @@ ENV/
 env/
 .env/
 
+
 # mypy
 .mypy_cache/
 
@@ -55,3 +56,6 @@ env/
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py
+
+# static files
+staticfiles/
