@@ -1,4 +1,4 @@
-# Django Boilerplate
+# Mayan Web Studio
 
 A simple Django project boilerplate with Sass 7-1 architecture, compiler and live reload via BrowserSync
 
@@ -17,8 +17,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Project Setup
 Create a django ready virtual environment with mySQL database ready
 ```
-pip install virtualenv env
-source env/bin/activate
+virtualenv .env
+source .env/bin/activate
 pip install mysqlclient
 pip install django
 ```
