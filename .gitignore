@@ -39,7 +39,6 @@ pip-delete-this-directory.txt
 local.py
 .vscode
 .env
-Procfile
 
 # virtualenv
 .venv/
