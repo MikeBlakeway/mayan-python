@@ -1,0 +1,429 @@
+// =====> General Helper Classes <===== //
+
+.block {
+  display: block;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.scroll {
+  background: #369ca12f;
+  transition: all 0.5s ease;
+}
+
+// =====> Text Align <===== //
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+// =====> Margin & Padding Helpers <===== //
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
+}
+
+// =====> Flexbox Helpers <===== //
+
+.flex {
+  display: flex;
+}
+
+.justify {
+  &__around {
+    justify-content: space-around;
+  }
+
+  &__between {
+    justify-content: space-between;
+  }
+
+  &__evenly {
+    justify-content: space-evenly;
+  }
+
+  &__center {
+    justify-content: center;
+  }
+}
+
+.align {
+  &__center {
+    align-items: center;
+  }
+
+  &__start {
+    align-items: flex-start;
+  }
+
+  &__end {
+    align-items: flex-end;
+  }
+}
+
+// =====> Utility Helpers <===== //
+
+// ===> MARGIN
+.m {
+  // Full Margin
+  &-0 {
+    margin: 0 !important;
+  }
+  &-1 {
+    margin: 1rem;
+  }
+  &-2 {
+    margin: 2rem;
+  }
+  &-3 {
+    margin: 3rem;
+  }
+  &-4 {
+    margin: 4rem;
+  }
+  &-5 {
+    margin: 5rem;
+  }
+
+  //   Y Margin
+  &y {
+    &-0 {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    &-1 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    &-2 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    &-3 {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    &-4 {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+    &-5 {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  //   X Margin
+  &x {
+    &-auto {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    &-0 {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    &-1 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    &-2 {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    &-3 {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+    &-4 {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+    &-5 {
+      margin-left: 5rem;
+      margin-right: 5rem;
+    }
+  }
+
+  //   Top Margin
+  &t {
+    &-0 {
+      margin-top: 0 !important;
+    }
+    &-1 {
+      margin-top: 1rem;
+    }
+    &-2 {
+      margin-top: 2rem;
+    }
+    &-3 {
+      margin-top: 3rem;
+    }
+    &-4 {
+      margin-top: 4rem;
+    }
+    &-5 {
+      margin-top: 5rem;
+    }
+  }
+
+  //   Bottom Margin
+  &b {
+    &-0 {
+      margin-bottom: 0 !important;
+    }
+    &-1 {
+      margin-bottom: 1rem;
+    }
+    &-2 {
+      margin-bottom: 2rem;
+    }
+    &-3 {
+      margin-bottom: 3rem;
+    }
+    &-4 {
+      margin-bottom: 4rem;
+    }
+    &-5 {
+      margin-bottom: 5rem;
+    }
+  }
+
+  //   Left Margin
+  &l {
+    &-0 {
+      margin-left: 0 !important;
+    }
+    &-1 {
+      margin-left: 1rem;
+    }
+    &-2 {
+      margin-left: 2rem;
+    }
+    &-3 {
+      margin-left: 3rem;
+    }
+    &-4 {
+      margin-left: 4rem;
+    }
+    &-5 {
+      margin-left: 5rem;
+    }
+  }
+
+  //   Right Margin
+  &r {
+    &-0 {
+      margin-right: 0 !important;
+    }
+    &-1 {
+      margin-right: 1rem;
+    }
+    &-2 {
+      margin-right: 2rem;
+    }
+    &-3 {
+      margin-right: 3rem;
+    }
+    &-4 {
+      margin-right: 4rem;
+    }
+    &-5 {
+      margin-right: 5rem;
+    }
+  }
+}
+
+// ===> Padding
+.p {
+  // Full padding
+  &-0 {
+    padding: 0 !important;
+  }
+  &-1 {
+    padding: 1rem;
+  }
+  &-2 {
+    padding: 2rem;
+  }
+  &-3 {
+    padding: 3rem;
+  }
+  &-4 {
+    padding: 4rem;
+  }
+  &-5 {
+    padding: 5rem;
+  }
+
+  //   Y padding
+  &y {
+    &-0 {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    &-1 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    &-2 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    &-3 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    &-4 {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    &-5 {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  //   X padding
+  &x {
+    &-0 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    &-1 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &-2 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    &-3 {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    &-4 {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    &-5 {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+
+  //   Top padding
+  &t {
+    &-0 {
+      padding-top: 0 !important;
+    }
+    &-1 {
+      padding-top: 1rem;
+    }
+    &-2 {
+      padding-top: 2rem;
+    }
+    &-3 {
+      padding-top: 3rem;
+    }
+    &-4 {
+      padding-top: 4rem;
+    }
+    &-5 {
+      padding-top: 5rem;
+    }
+  }
+
+  //   Bottom padding
+  &b {
+    &-0 {
+      padding-bottom: 0 !important;
+    }
+    &-1 {
+      padding-bottom: 1rem;
+    }
+    &-2 {
+      padding-bottom: 2rem;
+    }
+    &-3 {
+      padding-bottom: 3rem;
+    }
+    &-4 {
+      padding-bottom: 4rem;
+    }
+    &-5 {
+      padding-bottom: 5rem;
+    }
+  }
+
+  //   Left padding
+  &l {
+    &-0 {
+      padding-left: 0 !important;
+    }
+    &-1 {
+      padding-left: 1rem;
+    }
+    &-2 {
+      padding-left: 2rem;
+    }
+    &-3 {
+      padding-left: 3rem;
+    }
+    &-4 {
+      padding-left: 4rem;
+    }
+    &-5 {
+      padding-left: 5rem;
+    }
+  }
+
+  //   Right padding
+  &r {
+    &-0 {
+      padding-right: 0 !important;
+    }
+    &-1 {
+      padding-right: 1rem;
+    }
+    &-2 {
+      padding-right: 2rem;
+    }
+    &-3 {
+      padding-right: 3rem;
+    }
+    &-4 {
+      padding-right: 4rem;
+    }
+    &-5 {
+      padding-right: 5rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+#about {
+  overflow: hidden;
+  position: relative;
+  h1 {
+    font-size: 4.2rem;
+    margin-bottom: 2.5rem;
+  }
+  h4 {
+    color: $teal;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.about {
+  &--intro {
+    padding: 2rem;
+  }
+}

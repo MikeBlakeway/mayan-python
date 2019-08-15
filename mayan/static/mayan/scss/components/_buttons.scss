@@ -1,0 +1,63 @@
+.button {
+  display: block;
+  width: 70%;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+  font-family: "OpenSans_Bold";
+  font-size: 1.8rem;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  border: 2px solid $red;
+  color: $red;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  &-teal {
+    background-color: $white;
+    color: $teal;
+    border: 4px solid $teal;
+
+    &:hover {
+      background-color: $teal;
+      border: 4px solid transparent;
+      color: $white;
+    }
+  }
+
+  &-red {
+    background-color: $white;
+    color: $red;
+    border: 4px solid $red;
+
+    &:hover {
+      background-color: $red;
+      border: 4px solid transparent;
+      color: $white;
+    }
+  }
+}
+
+.button-link {
+  color: $red;
+  font-family: "Futura_Bold";
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin-top: 6rem;
+  display: block;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4.2rem;
+    left: 0;
+    width: 10rem;
+    background-color: $red;
+    height: 2px;
+  }
+}

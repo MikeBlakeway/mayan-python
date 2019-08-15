@@ -1,0 +1,198 @@
+.package {
+  &--list {
+    margin-top: 4rem;
+  }
+  &--item {
+    display: flex;
+    padding: 4rem 0;
+    margin: 3rem 0;
+    h4 {
+      color: black !important;
+      text-transform: unset;
+      font-size: 2rem;
+      span {
+        font-size: 1.5rem;
+        color: $teal;
+        text-transform: lowercase;
+        font-style: italic;
+        margin-left: 1.5rem;
+      }
+    }
+    p {
+      padding-right: 3rem;
+    }
+    img {
+      display: block;
+      height: 9rem;
+      margin-right: 1.5rem;
+    }
+  }
+  &--description {
+    font-family: "Futura";
+    color: $dark;
+    border: 1px solid black;
+    margin-top: 4rem;
+    h3 {
+      color: $red;
+    }
+    h4 {
+      text-transform: unset;
+      color: $red;
+      margin: 0 !important;
+      padding: 1rem 0;
+    }
+    span {
+      color: $teal;
+      display: block;
+      width: 100%;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    p {
+      padding: 2rem 0;
+    }
+    ul li {
+      padding: 1rem 2.5rem;
+    }
+    button {
+      padding: 1.5rem 4.5rem;
+      color: $red;
+      background: transparent;
+      border: 2px solid $red;
+      font-family: "Futura";
+      letter-spacing: 1.1px;
+      font-size: 1.6rem;
+      display: block;
+      margin: 2rem auto;
+    }
+  }
+  &--price {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+    height: 75rem;
+    overflow: hidden;
+    .price--container {
+      padding: 3rem 0;
+      min-height: 100%;
+      transform: translateY(0%);
+      h3 {
+        color: $black;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+      }
+      h5 {
+        color: $teal;
+        font-weight: 100;
+        font-family: "Futura";
+        font-size: 1.5rem;
+        padding-left: 1rem;
+      }
+      span {
+        margin: 1rem auto;
+        color: $teal;
+        font-family: "Futura";
+        font-weight: 100;
+        font-style: italic;
+        display: block;
+        text-align: center;
+      }
+      p {
+        padding: 2rem 1rem;
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+.included {
+  padding: 2rem;
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  &-list {
+    padding: 1.5rem;
+    font-family: $font-body;
+    font-size: 1.6rem;
+    line-height: 2;
+    letter-spacing: 0.25px;
+  }
+}
+
+.packages {
+  &--container {
+    padding-bottom: 6rem;
+  }
+  h4 {
+    color: $black;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  &--icon {
+    height: 10rem;
+    align-self: center;
+    margin: 0 auto;
+  }
+  &--copy {
+    padding: 0 2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-title {
+    font-size: 2rem;
+    padding: 8rem 1rem 2.5rem;
+  }
+  &-subtitle {
+    color: $teal;
+    padding: 1rem;
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+  svg,
+  p,
+  h4 {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+  svg {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 3.5rem;
+  }
+  span {
+    color: $teal;
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    font-style: italic;
+    font-weight: 100;
+  }
+}
+.carousel {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  @media only screen and (max-width: 1100px) {
+    min-width: 100%;
+    padding: 0;
+  }
+  .packages--container {
+    min-width: 50vw;
+    transform: translateX(0%);
+    @media only screen and (max-width: 1100px) {
+      min-width: 100%;
+      padding-left: 4rem;
+    }
+  }
+}

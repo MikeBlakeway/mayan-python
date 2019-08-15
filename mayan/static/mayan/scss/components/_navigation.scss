@@ -1,0 +1,115 @@
+// =====> NAVIGATION STYLES <===== //
+.logo {
+    height: 5rem;
+    fill: $teal;
+    transform: translateY(150%);
+    animation: logo-color 0.95s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards;
+    transition: all 0.35s ease-out;
+
+    &-wrapper {
+        overflow: hidden;
+    }
+}
+
+#nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    padding: 1rem 0;
+    font-family: "Futura";
+    font-size: 1.8rem;
+}
+
+.navbar {
+    display: flex;
+    // padding: 0 5rem;
+    align-items: center;
+    justify-content: space-between;
+
+    &--list {
+        display: flex;
+    }
+
+    &--item {
+        padding: 1.5rem 2.5rem;
+
+        a {
+            color: $teal;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -0.5rem;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                background-color: $teal;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.25s ease-in;
+            }
+        }
+
+        &:hover a::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+
+    .hamburger {
+        position: relative;
+        padding: 1.5rem;
+        width: 4rem;
+        cursor: pointer;
+
+        &--icon {
+            position: absolute;
+            left: 0;
+            height: 3px;
+            width: 0;
+            background-color: $teal;
+            animation: hamburgerEnter 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards;
+
+            @media only screen and (max-width: 1200px) {
+                background-color: $teal;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                left: 0;
+                height: 3px;
+                width: 100%;
+                background-color: $teal;
+
+                @media only screen and (max-width: 1200px) {
+                    background-color: $teal;
+                }
+            }
+
+            &::before {
+                top: 0;
+                animation: hamburgerEnterBefore 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards;
+            }
+
+            &::after {
+                top: 0;
+                animation: hamburgerEnterAfter 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards;
+            }
+        }
+    }
+
+    #navMenu {
+        display: none; // show using js
+    }
+}

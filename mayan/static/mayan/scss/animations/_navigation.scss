@@ -1,0 +1,69 @@
+@keyframes logo-color {
+    0% {
+        transform: translateY(150%) scale(0.6);
+    }
+
+    25% {
+        transform: translateY(150%) scale(0.6);
+    }
+
+    100% {
+        transform: translateY(5%) scale(0.8);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hamburgerEnter {
+
+    // positive
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes hamburgerEnterBefore {
+
+    // positive
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 8px;
+    }
+}
+
+@keyframes hamburgerEnterAfter {
+
+    // negative
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -8px;
+    }
+}

@@ -1,13 +1,13 @@
 
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from django.views import debug
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', debug.default_urlconf),
-]
+    path('', include('mayan.urls')),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar

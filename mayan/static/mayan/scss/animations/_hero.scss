@@ -1,0 +1,39 @@
+@keyframes flames {
+    0% {
+        transform: skew(-0.25deg);
+    }
+
+    100% {
+        transform: skew(0.25deg);
+    }
+}
+
+@keyframes rocket {
+    0% {
+        transform: skew(-0.05deg);
+    }
+
+    100% {
+        transform: skew(0.05deg);
+    }
+}
+
+@keyframes trail {
+    0% {
+        transform: skew(-0.05deg);
+    }
+
+    100% {
+        transform: skew(0.05deg);
+    }
+}
+
+@keyframes smoke {
+    0% {
+        transform: skew(-0.5deg), scaleX(2);
+    }
+
+    100% {
+        transform: skew(0.5deg);
+    }
+}

@@ -1,0 +1,114 @@
+#loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5rem;
+  z-index: 100;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: fadeOut 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) 2s forwards;
+  pointer-events: none;
+
+  .svg-container {
+    position: relative;
+    width: 10rem;
+    height: 100%;
+    z-index: 1;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      bottom: 45%;
+      left: 0;
+      animation: lineShrink 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.5s forwards; //https://easings.net/en#easeInBack
+      z-index: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 100%;
+      bottom: 45%;
+      left: 0;
+      animation: lineGrow 1.5s linear forwards;
+      z-index: 1;
+      transform-origin: left;
+    }
+  }
+
+  #mayanIcon {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 55%, 100% 55%, 100% 0, 0 0);
+  }
+
+  #talisman {
+    transform: scale(0.75) translateY(-50%);
+    opacity: 0;
+    fill: #666;
+    transform-origin: center;
+    animation: loader 2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards; //https://easings.net/en#easeInBack
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.75) translateY(-50%);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(0.75) translateY(-50%);
+  }
+
+  100% {
+    transform: scale(0.75) translateY(150%);
+    opacity: 1;
+  }
+}
+
+@keyframes lineShrink {
+  0% {
+    background: #666;
+    transform: scaleX(1);
+  }
+
+  100% {
+    background: #666;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes lineGrow {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+
+  75% {
+    background: #666;
+    opacity: 1;
+  }
+
+  99% {
+    background: #666;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}

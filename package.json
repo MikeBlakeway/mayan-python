@@ -4,9 +4,9 @@
   "description": "A simple Django project boilerplate with Sass 7-1 architecture, compiler and live reload via BrowserSync",
   "main": "index.js",
   "scripts": {
-    "css-compile": "node-sass main/static/main/scss -o main/static/main/css",
-    "css-watch": "node-sass main/static/main/scss -o main/static/main/css --watch",
-    "browser-sync": "browser-sync start --files \"main/static/main/css/*.css, main/static/main/js/*.js, main/**/*.py, main/templates/*.html\" --proxy 127.0.0.1:8000",
+    "css-compile": "node-sass mayan/static/mayan/scss -o mayan/static/mayan/css",
+    "css-watch": "node-sass mayan/static/mayan/scss -o mayan/static/mayan/css --watch",
+    "browser-sync": "browser-sync start --files \"mayan/static/mayan/css/*.css, mayan/static/mayan/js/*.js, mayan/**/*.py, mayan/templates/*.html\" --proxy 127.0.0.1:8000",
     "start": "concurrently --kill-others \"npm run css-watch\" \"npm run browser-sync\""
   },
   "repository": {
