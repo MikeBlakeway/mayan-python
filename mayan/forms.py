@@ -2,7 +2,7 @@ from django import forms
 
 
 class ContactForm(forms.Form):
-    name = forms.CharField(widget=forms.TextInput(attrs={'class': "form-control"}), label="Name", error_messages={
+    name = forms.CharField(widget=forms.TextInput, label="Name", error_messages={
                            'required': 'Please enter your name'}, required=True)
     email = forms.EmailField()
     phone = forms.CharField(widget=forms.TextInput, label="Phone", error_messages={
