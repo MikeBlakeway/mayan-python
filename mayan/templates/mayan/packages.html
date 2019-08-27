@@ -1,0 +1,81 @@
+{% extends './mayan_base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+{% endblock head %}
+
+{% block content %}
+<section id="services" class="container">
+    {% include './components/glyphs.html' %}
+    <div class="row">
+        <small class="text-center block mt-3 mb-1">MAYAN STUDIO</small>
+        <h1 class="text-center block mb-2">WEBSITE PACKAGES</h1>
+    </div>
+    <div class="px-3 row">
+        <div class="col-xs-12 col-md-6 lead mb-4">
+            <p>We all like structure don’t we? Getting the most for our money is an important part of any deal we
+                consider taking seriously. Websites can be awkward to find a common price for. Nonetheless, we
+                strive to make things as clear as possible here at Mayan Web Studio.</p>
+            <div class="hero--button">
+                <button>
+                    <a href="/contact">Get In Touch</a>
+                </button>
+                <span class="arrow-right"></span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <p class="copy">We all like structure don’t we? Getting the most for our money is an important part of
+                any deal we consider taking seriously.</p>
+            <p class="copy">Websites can be awkward to find a common price for, so it’s pretty typical of most
+                development teams to quote based on your requirements rather than offering something ‘off the
+                shelf’.</p>
+            <p class="copy">Nonetheless, we strive to make things as clear as possible here at Mayan Web Studio so
+                putting together a solid guide as to just how much your budget is going to get you seemed only
+                right.</p>
+        </div>
+    </div>
+    <div class="px-3 row">
+        <div>
+            <h3 class="icons-inline--title">PACKAGES
+                {% include './components/icons_inline.html' %}
+            </h3>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+    </div>
+    {% include './components/slick_carousel.html' %}
+
+</section>
+{% endblock content %}
+
+{% block scripts %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.slider-nav').slick({
+            dots: true,
+            lazyLoad: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            cssEase: "ease-in-out",
+            asNavFor: '.slider-for',
+            cssEase: "ease-in-out",
+        });
+        $('.slider-for').slick({
+            infinite: true,
+            speed: 800,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            cssEase: "ease-in-out",
+            arrows: false
+        });
+    });
+</script>
+{% endblock scripts %}

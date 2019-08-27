@@ -7,7 +7,7 @@
     margin-right: auto;
     max-width: 90vw;
 
-    & > svg {
+    &>svg {
       height: auto;
       width: 9rem;
       opacity: 0.2;
@@ -24,7 +24,7 @@
       margin-left: auto;
       margin-right: auto;
 
-      & > svg {
+      &>svg {
         height: auto;
         width: 6rem;
         opacity: 0.2;
@@ -36,17 +36,40 @@
       }
     }
   }
+
   &-inline {
     display: inline-flex;
     margin-left: 3.5rem;
+
     &--title {
       display: flex;
       align-items: center;
       padding: 3rem 0;
       margin-top: 6rem;
     }
-    & > svg {
+
+    &>img {
       margin-right: 1.5rem;
+      height: 5rem;
+      width: 5rem;
     }
   }
 }
+
+.slick--icon {
+  display: block;
+  height: 10rem;
+  align-self: center;
+  margin: 0px auto;
+}
+
+.pricetag {
+  font-family: Futura;
+  color: rgb(54, 155, 161);
+  font-style: italic;
+  text-transform: lowercase;
+  display: block;
+  font-size: 1.4rem;
+}
+
+;

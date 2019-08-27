@@ -1,23 +1,21 @@
 {% extends 'mayan/mayan_base.html' %}
-{% load static %}
-{% block content %}
-<div class="hero--title">
-    <div class="hero--glyphs">
-        <img src="{% static 'mayan/svg/glyph_one.svg' %}" alt="Glyph One" />
-        <img src="{% static 'mayan/svg/glyph_two.svg' %}" alt="Glyph Two" />
-        <img src="{% static 'mayan/svg/glyph_three.svg' %}" alt="Glyph Three" />
-    </div>
 
-    <h1>MAYAN</h1>
-    <h3>Website Design &amp; Development Studio</h3>
-    <small>Bespoke Online Solutions For SME’s &amp; Sole Traders</small>
-    <div class="hero--button">
-        <button>
-            <a href="/about">Let's Go</a>
-        </button>
-        <span class="arrow-right"><span>
+{% block content %}
+<section class="hero">
+    <div class="hero--title">
+        {% include './components/glyphs.html' %}
+
+        <h1>MAYAN</h1>
+        <h3>Website Design &amp; Development Studio</h3>
+        <small>Bespoke Online Solutions For SME’s &amp; Sole Traders</small>
+        <div class="hero--button">
+            <button>
+                <a href="/about">Let's Go</a>
+            </button>
+            <span class="arrow-right"><span>
+                </span>
             </span>
-        </span>
+        </div>
     </div>
-</div>
+</section>
 {% endblock content %}

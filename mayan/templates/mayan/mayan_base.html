@@ -13,10 +13,14 @@
 
     <body>
         {% include './components/header.html' %}
-        <section class="hero">
+        {% block head %}
+        {% endblock head %}
+        <main class="App">
             {% block content %}
             {% endblock content %}
-        </section>
+        </main>
+        {% block scripts %}
+        {% endblock scripts %}
     </body>
 
 </html>
