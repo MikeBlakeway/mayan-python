@@ -674,12 +674,12 @@ p {
   margin-left: auto;
   margin-right: auto;
   max-width: 90vw; }
-  .icons-container > svg {
+  .icons-container > img {
     height: auto;
     width: 9rem;
-    opacity: 0.2;
+    opacity: 0.4;
     margin-bottom: 4rem; }
-    .icons-container > svg:not(last-child) {
+    .icons-container > img:not(last-child) {
       margin-right: 4rem; }
   .icons-container--small {
     display: flex;

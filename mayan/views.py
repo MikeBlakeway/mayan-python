@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, FormView
+from .forms import ContactForm
 
 
 class IndexView(TemplateView):
@@ -18,5 +19,6 @@ class ProductsView(TemplateView):
     template_name = 'mayan/packages.html'
 
 
-class ContactView(TemplateView):
+class ContactView(FormView):
     template_name = 'mayan/contact.html'
+    form_class = ContactForm
