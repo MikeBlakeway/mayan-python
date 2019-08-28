@@ -1,6 +1,8 @@
 from django import forms
 
 
+# TODO: Add error messages to form validations & integrate email responder
+
 class ContactForm(forms.Form):
 
     fname = forms.CharField(
