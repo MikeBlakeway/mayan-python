@@ -1,7 +1,7 @@
 from django import forms
 
 
-# TODO: Add error messages to form validations & integrate email responder
+# TODO: integrate email responder
 
 class ContactForm(forms.Form):
 
@@ -36,7 +36,10 @@ class ContactForm(forms.Form):
         label='',
         max_length=80,
         required=True,
-        error_messages={'required': 'Please enter a valid email'},
+        error_messages={
+            'required': 'Please enter your email address',
+            'invalid': 'Please enter a valid email address'
+        },
     )
 
     phone = forms.CharField(

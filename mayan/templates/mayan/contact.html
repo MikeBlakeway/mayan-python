@@ -31,30 +31,57 @@
                     <label for="message" class="label-name">
                         <span class="content-name">How can I help you?</span>
                     </label>
+
+                    {% if form.message.errors %}
+                    {% for error in form.message.errors %}
+                    <div class="error-message">{{ error|escape }}</div>
+                    {% endfor %}
+                    {% endif %}
+
                 </div>
                 <div class="field-container">
                     {{ form.fname }}
                     <label for="fname" class="label-name">
                         <span class="content-name">First Name</span>
                     </label>
+                    {% if form.fname.errors %}
+                    {% for error in form.fname.errors %}
+                    <div class="error-message">{{ error|escape }}</div>
+                    {% endfor %}
+                    {% endif %}
                 </div>
                 <div class="field-container">
                     {{ form.lname }}
                     <label for="lname" class="label-name">
                         <span class="content-name">Last Name</span>
                     </label>
+                    {% if form.lname.errors %}
+                    {% for error in form.lname.errors %}
+                    <div class="error-message">{{ error|escape }}</div>
+                    {% endfor %}
+                    {% endif %}
                 </div>
                 <div class="field-container">
                     {{ form.email }}
                     <label for="email" class="label-name">
                         <span class="content-name">Email</span>
                     </label>
+                    {% if form.email.errors %}
+                    {% for error in form.email.errors %}
+                    <div class="error-message">{{ error|escape }}</div>
+                    {% endfor %}
+                    {% endif %}
                 </div>
                 <div class="field-container">
                     {{ form.phone }}
                     <label for="phone" class="label-name">
                         <span class="content-name">Phone</span>
                     </label>
+                    {% if form.phone.errors %}
+                    {% for error in form.phone.errors %}
+                    <div class="error-message">{{ error|escape }}</div>
+                    {% endfor %}
+                    {% endif %}
                 </div>
                 <button type="submit" class="submit-button">SUBMIT</button>
             </form>
