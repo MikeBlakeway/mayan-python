@@ -24,10 +24,39 @@
             <p class="mb-5">hello@mayanwebstudio.co.uk</p>
         </div>
         <div class="col-md-6">
-            <form action="." method="POST">
+            <form class="form-container" method="POST" action='/contact/'>
                 {% csrf_token %}
-                {{ form }}
-                <input type="submit" value="Submit">
+                <div class="message-container">
+                    {{ form.message }}
+                    <label for="message" class="label-name">
+                        <span class="content-name">How can I help you?</span>
+                    </label>
+                </div>
+                <div class="field-container">
+                    {{ form.fname }}
+                    <label for="fname" class="label-name">
+                        <span class="content-name">First Name</span>
+                    </label>
+                </div>
+                <div class="field-container">
+                    {{ form.lname }}
+                    <label for="lname" class="label-name">
+                        <span class="content-name">Last Name</span>
+                    </label>
+                </div>
+                <div class="field-container">
+                    {{ form.email }}
+                    <label for="email" class="label-name">
+                        <span class="content-name">Email</span>
+                    </label>
+                </div>
+                <div class="field-container">
+                    {{ form.phone }}
+                    <label for="phone" class="label-name">
+                        <span class="content-name">Phone</span>
+                    </label>
+                </div>
+                <button type="submit" class="submit-button">SUBMIT</button>
             </form>
         </div>
     </div>

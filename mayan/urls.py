@@ -10,4 +10,5 @@ urlpatterns = [
     path('services/', TemplateView.as_view(template_name="mayan/services.html"), name="services"),
     path('packages/', TemplateView.as_view(template_name="mayan/packages.html"), name="packages"),
     path('contact/', ContactView.as_view(), name="contact"),
+    path('success/', TemplateView.as_view(template_name="mayan/success.html"), name="success"),
 ]

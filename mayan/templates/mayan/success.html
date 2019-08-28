@@ -1,0 +1,28 @@
+{% extends './mayan_base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    {% include './components/glyphs.html' %}
+    <div class="row">
+        <small class="text-center block mt-3 mb-1">MAYAN STUDIO</small>
+        <h1 class="text-center block mb-5">You're Awesome!</h1>
+    </div>
+    <div class="row">
+        <div class="col lead mb-4">
+            <p>Thanks for reaching out to us. We are really eager to get back to you and should be in touch within 30
+                minutes during working hours.</p>
+            <p class="mt-2"> If you are not available to speak to we will follow up your enquiry with
+                an email and look to arrange a more suitable time to discuss your needs.</p>
+            <div class="hero--button">
+                <button>
+                    <a href="{% url 'index' %}">Let's go home</a>
+                </button>
+                <span class="arrow-right">
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
