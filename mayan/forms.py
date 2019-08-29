@@ -1,4 +1,8 @@
+import os
+from decouple import config
 from django import forms
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 
 # TODO: integrate email responder
@@ -75,10 +79,18 @@ class ContactForm(forms.Form):
         phone = self.cleaned_data.get("phone")
         message = self.cleaned_data.get("message")
 
-        print(
-            first_name,
-            last_name,
-            email,
-            phone,
-            message
+        message = Mail(
+            from_email=config('EMAIL_FROM'),
+            to_emails=config('EMAIL_TO'),
+            subject='Sending with Twilio SendGrid is Fun',
+            html_content='<strong>and easy to do anywhere, even with Python</strong>'
         )
+
+        try:
+            sg = SendGridAPIClient(config('SENDGRID_API_KEY'))
+            response = sg.send(message)
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
+        except Exception as e:
+            print(e.message)

@@ -6,7 +6,7 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = [
-    config('ALLOWED_HOSTS'),
+    config('ALLOWED_HOSTS').split(',')
 ]
 
 
