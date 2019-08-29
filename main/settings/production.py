@@ -6,7 +6,8 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = [
-    config('ALLOWED_HOSTS').split(',')
+    config('ALLOWED_HOSTS'),
+    'mayanwebstudio.co.uk',
 ]
 
 
