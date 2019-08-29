@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div id="about" class="container">
+<div id="page" class="about container">
     {% include './components/glyphs.html' %}
     <div class="row">
         <small class="text-center block mt-3 mb-1">MAYAN STUDIO</small>
@@ -14,8 +14,8 @@
                 you’ll need a solid online presence to stand any chance of surviving. You might last for a short while
                 without one, but one thing is certain - your competition is already working on theirs…</p>
             <div class="hero--button">
-                <button>
-                    <a href="{% url 'services' %}">View Web Services</a>
+                <button id="left">
+                    <a>See our package prices</a>
                 </button>
                 <span class="arrow-right">
                     <span></span>
@@ -207,3 +207,9 @@
     </div>
 </div>
 {% endblock content %}
+
+{% block scripts %}
+<script>
+    var link = "{% url 'packages' %}";
+</script>
+{% endblock scripts %}

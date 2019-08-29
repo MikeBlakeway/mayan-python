@@ -15,8 +15,8 @@
             <p class="mt-2"> If you are not available to speak to we will follow up your enquiry with
                 an email and look to arrange a more suitable time to discuss your needs.</p>
             <div class="hero--button">
-                <button>
-                    <a href="{% url 'index' %}">Let's go home</a>
+                <button id="left">
+                    <a>Take me home</a>
                 </button>
                 <span class="arrow-right">
                     <span></span>
@@ -26,3 +26,11 @@
     </div>
 </div>
 {% endblock content %}
+
+{% block scripts %}
+
+<script>
+    var link = "{% url 'index' %}";
+</script>
+
+{% endblock scripts %}

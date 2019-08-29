@@ -1,4 +1,4 @@
-#about {
+.about {
   overflow: hidden;
   position: relative;
   margin-top: 4rem;
@@ -13,9 +13,7 @@
     line-height: 1.5;
     margin-bottom: 1.5rem;
   }
-}
 
-.about {
   &--intro {
     padding: 2rem;
   }

@@ -15,12 +15,19 @@
         {% include './components/header.html' %}
         {% block head %}
         {% endblock head %}
-        <main class="App">
+        <main id="App">
+            <div class="layer"></div>
+            <div class="layer layer--2"></div>
+            <div class="layer layer--3"></div>
+            <div class="layer layer--4"></div>
             {% block content %}
             {% endblock content %}
         </main>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         {% block scripts %}
         {% endblock scripts %}
+        <script type="text/javascript" src="{% static "mayan/js/transitions.js" %}"></script>
     </body>
 
 </html>

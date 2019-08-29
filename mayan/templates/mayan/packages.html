@@ -6,7 +6,7 @@
 {% endblock head %}
 
 {% block content %}
-<section id="services" class="container">
+<section id="page" class="py-3 container">
     {% include './components/glyphs.html' %}
     <div class="row">
         <small class="text-center block mt-3 mb-1">MAYAN STUDIO</small>
@@ -15,11 +15,11 @@
     <div class="px-3 row">
         <div class="col-xs-12 col-md-6 lead mb-4">
             <p>We all like structure don’t we? Getting the most for our money is an important part of any deal we
-                consider taking seriously. Websites can be awkward to find a common price for. Nonetheless, we
-                strive to make things as clear as possible here at Mayan Web Studio.</p>
+                consider taking seriously. Websites can be awkward to find a common price for. Nonetheless, we strive to
+                make things as clear as possible here at Mayan Web Studio.</p>
             <div class="hero--button">
-                <button>
-                    <a href="{% url 'contact' %}">Get In Touch</a>
+                <button id="left">
+                    <a>View our services</a>
                 </button>
                 <span class="arrow-right">
                     <span></span>
@@ -42,10 +42,7 @@
             <h3 class="icons-inline--title">PACKAGES
                 {% include './components/icons_inline.html' %}
             </h3>
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p class="mb-5">{% lorem 2 b random %}</p>
         </div>
     </div>
     {% include './components/slick_carousel.html' %}
@@ -54,8 +51,11 @@
 {% endblock content %}
 
 {% block scripts %}
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script>
+    var link = "{% url 'services' %}";
+</script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -80,4 +80,5 @@
         });
     });
 </script>
+
 {% endblock scripts %}

@@ -970,20 +970,19 @@ canvas {
   border: 1px solid #000;
   z-index: -1; }
 
-#about {
+.about {
   overflow: hidden;
   position: relative;
   margin-top: 4rem; }
-  #about h1 {
+  .about h1 {
     font-size: 4.2rem;
     margin-bottom: 2.5rem; }
-  #about h4 {
+  .about h4 {
     color: #369ba1;
     line-height: 1.5;
     margin-bottom: 1.5rem; }
-
-.about--intro {
-  padding: 2rem; }
+  .about--intro {
+    padding: 2rem; }
 
 .package--list {
   margin-top: 4rem; }
@@ -2435,30 +2434,6 @@ input:-webkit-autofill {
 .slick-slide > div {
   padding: 0 3rem; }
 
-@keyframes flames {
-  0% {
-    transform: skew(-0.25deg); }
-  100% {
-    transform: skew(0.25deg); } }
-
-@keyframes rocket {
-  0% {
-    transform: skew(-0.05deg); }
-  100% {
-    transform: skew(0.05deg); } }
-
-@keyframes trail {
-  0% {
-    transform: skew(-0.05deg); }
-  100% {
-    transform: skew(0.05deg); } }
-
-@keyframes smoke {
-  0% {
-    transform: skew(-0.5deg), scaleX(2); }
-  100% {
-    transform: skew(0.5deg); } }
-
 @keyframes logo-color {
   0% {
     transform: translateY(150%) scale(0.6); }
@@ -2496,3 +2471,42 @@ input:-webkit-autofill {
     top: 0; }
   to {
     top: -8px; } }
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: auto;
+  left: -100%;
+  bottom: auto;
+  right: auto;
+  background: #369ba1;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .layer.active {
+    left: 100%; }
+  .layer--2 {
+    background: #d3d4d8;
+    transition-delay: 0.3s; }
+  .layer--3 {
+    background: #d3d4d8;
+    transition-delay: 0.12s; }
+  .layer--4 {
+    background: #79272b;
+    transition-delay: 0.08s; }
+
+#page {
+  animation: fade-in .7s ease-in forwards; }
+  #page.fade {
+    animation: fade-out .5s ease-in forwards; }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }

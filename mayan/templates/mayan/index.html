@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<section class="hero">
+<section class="hero" id="page">
     <div class="hero--title">
         <div class="hero--glyphs">
             <img src="{% static 'mayan/svg/glyph_one.svg' %}" alt="Glyph One" />
@@ -13,14 +13,21 @@
         <h1>MAYAN</h1>
         <h3>Website Design &amp; Development Studio</h3>
         <small>Bespoke Online Solutions For SME’s &amp; Sole Traders</small>
+
         <div class="hero--button">
-            <button>
-                <a href="{% url 'about' %}">Let's Go</a>
+            <button id="left">
+                <a>Let's Go!</a>
             </button>
-            <span class="arrow-right"><span>
-                </span>
+            <span class="arrow-right">
+                <span></span>
             </span>
         </div>
     </div>
 </section>
 {% endblock content %}
+
+{% block scripts %}
+<script>
+    var link = "{% url 'about' %}";
+</script>
+{% endblock scripts %}

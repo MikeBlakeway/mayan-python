@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<section id="services" class="container">
+<section id="page" class="py-3 container">
     {% include './components/glyphs.html' %}
     <div class="row">
         <small class="text-center block mt-3 mb-1">MAYAN STUDIO</small>
@@ -14,8 +14,8 @@
                 can spend hours staring at template after template on build tools like Wix or Squarespace without ever
                 really considering the most important question… “What problem am I trying to solve?”</p>
             <div class="hero--button">
-                <button>
-                    <a href="{% url 'packages' %}">View Web Packages</a>
+                <button id="left">
+                    <a>How to get in touch</a>
                 </button>
                 <span class="arrow-right">
                     <span></span>
@@ -445,3 +445,11 @@
     </div>
 </section>
 {% endblock content %}
+
+{% block scripts %}
+
+<script>
+    var link = "{% url 'contact' %}";
+</script>
+
+{% endblock scripts %}

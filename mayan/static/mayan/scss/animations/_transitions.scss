@@ -1,0 +1,38 @@
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    left: -100%;
+    bottom: auto;
+    right: auto;
+    background: $teal;
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &.active {
+        left: 100%;
+    }
+
+    &--2 {
+        background: #d3d4d8;
+        transition-delay: 0.3s;
+    }
+
+    &--3 {
+        background: #d3d4d8;
+        transition-delay: 0.12s;
+    }
+
+    &--4 {
+        background: $red;
+        transition-delay: 0.08s;
+    }
+}
+
+#page {
+    animation: fade-in .7s ease-in forwards;
+
+    &.fade {
+        animation: fade-out .5s ease-in forwards;
+    }
+}
