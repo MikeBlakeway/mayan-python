@@ -1,11 +1,9 @@
 .layer {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
     left: -100%;
-    bottom: auto;
-    right: auto;
     background: $teal;
     transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
 
