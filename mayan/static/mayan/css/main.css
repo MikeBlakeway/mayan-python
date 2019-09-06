@@ -2903,5 +2903,7 @@ input:-webkit-autofill {
     .icons-inline > img {
       height: 4rem;
       width: 4rem; }
+  .message-container textarea {
+    padding-top: 1rem; }
   .slick-slide > div {
     padding: 0; } }
