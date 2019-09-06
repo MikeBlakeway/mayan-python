@@ -4,7 +4,7 @@ h1 {
   font-family: $font-title;
   font-size: 5.6rem;
   text-transform: uppercase;
-  color: $red;
+  color: $titlecolor;
   line-height: 1.3;
   margin: 1rem auto;
   letter-spacing: 5px;
@@ -14,7 +14,7 @@ h2 {
   font-family: $font-title;
   font-size: 4.8rem;
   text-transform: uppercase;
-  color: $red;
+  color: $titlecolor;
   line-height: 2;
   letter-spacing: 5px;
 }
@@ -23,7 +23,7 @@ h3 {
   font-family: $font-title;
   font-size: 2.8rem;
   text-transform: capitalize;
-  color: $red;
+  color: $titlecolor;
   letter-spacing: 1.2px;
   line-height: 2;
 }
@@ -40,14 +40,14 @@ h4 {
 small {
   font-family: $font-body;
   font-size: 2.4rem;
-  color: $black;
+  color: $fontcolor;
   letter-spacing: 1.5px;
   line-height: 1.5;
 }
 
 p {
   font-family: $font-body;
-  color: $dark;
+  color: $fontcolor;
   line-height: 1.5;
 }
 
@@ -64,7 +64,7 @@ p {
 
 .copy {
   font-family: $font-body;
-  color: $dark;
+  color: $fontcolor;
   padding: 1.5rem 1rem;
   line-height: 1.5;
 }

@@ -1,0 +1,38 @@
+/* 
+        *
+        *   Breakpoints for all devices listed here...
+        *
+        *   $breakpoint-small = 540px
+        *   $breakpoint-med = 720px
+        *   $breakpoint-large = 960px
+        *
+*/
+
+// --- grid
+
+@media only screen and (min-width: $breakpoint-large) {
+    .container {
+        width: 80%;
+        max-width: 140rem;
+    }
+
+    .hero {
+
+        &--glyphs img {
+            margin: 0 1.5rem;
+            height: 9.5rem;
+        }
+
+        &--title {
+            h1 {
+                font-size: 15rem;
+                line-height: 1.3;
+            }
+
+            h3 {
+                font-size: 2.8rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}

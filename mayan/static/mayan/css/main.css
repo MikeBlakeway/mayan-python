@@ -513,7 +513,7 @@ h4 {
 small {
   font-family: "Quicksand", sans-serif;
   font-size: 2.4rem;
-  color: #000;
+  color: #464646;
   letter-spacing: 1.5px;
   line-height: 1.5; }
 
@@ -536,6 +536,7 @@ p {
 
 .logo {
   height: 5rem;
+  margin-top: 2rem;
   fill: #369ba1;
   transform: translateY(150%);
   animation: logo-color 0.95s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards;
@@ -547,8 +548,10 @@ p {
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
   z-index: 99;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  padding: 5px 80px; }
 
 .navbar {
   position: relative;
@@ -582,38 +585,6 @@ p {
     .navbar--item:hover a::after {
       transform: scaleX(1);
       transform-origin: left; }
-  .navbar .hamburger {
-    position: relative;
-    padding: 1.5rem;
-    width: 4rem;
-    cursor: pointer; }
-    .navbar .hamburger--icon {
-      position: absolute;
-      left: 0;
-      height: 3px;
-      width: 0;
-      background-color: #369ba1;
-      animation: hamburgerEnter 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards; }
-      @media only screen and (max-width: 1200px) {
-        .navbar .hamburger--icon {
-          background-color: #369ba1; } }
-      .navbar .hamburger--icon::before, .navbar .hamburger--icon::after {
-        content: "";
-        position: absolute;
-        display: block;
-        left: 0;
-        height: 3px;
-        width: 100%;
-        background-color: #369ba1; }
-        @media only screen and (max-width: 1200px) {
-          .navbar .hamburger--icon::before, .navbar .hamburger--icon::after {
-            background-color: #369ba1; } }
-      .navbar .hamburger--icon::before {
-        top: 0;
-        animation: hamburgerEnterBefore 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards; }
-      .navbar .hamburger--icon::after {
-        top: 0;
-        animation: hamburgerEnterAfter 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards; }
   .navbar #navMenu {
     display: none; }
 
@@ -879,23 +850,6 @@ p {
       font-size: 1.6rem;
       line-height: 1.6;
       display: block; }
-    @media only screen and (max-width: 540px) {
-      .hero--title h1 {
-        font-size: 10rem;
-        margin: 0; }
-      .hero--title h3 {
-        font-size: 2rem;
-        margin: 1.5rem 0; }
-      .hero--title small {
-        font-size: 1.5rem;
-        margin: 0; } }
-    @media only screen and (min-width: 1200px) {
-      .hero--title h1 {
-        font-size: 15rem;
-        line-height: 1.3; }
-      .hero--title h3 {
-        font-size: 2.8rem;
-        line-height: 1.5; } }
   .hero--button {
     width: 40rem;
     position: relative;
@@ -2502,3 +2456,401 @@ input:-webkit-autofill {
     opacity: 1; }
   to {
     opacity: 0; } }
+
+.shape-overlays {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none; }
+  .shape-overlays.is-opened {
+    pointer-events: auto; }
+
+.shape-overlays path:nth-of-type(1) {
+  fill: #f6a800; }
+
+.shape-overlays path:nth-of-type(2) {
+  fill: #369ba1; }
+
+.shape-overlays path:nth-of-type(3) {
+  fill: #79272b; }
+
+.global-menu {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100; }
+
+.global-menu__item {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3vmax;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+  display: block;
+  margin: 0.25em 0;
+  transition: transform 0.3s, opacity 0.3s;
+  transition-timing-function: ease-in; }
+
+.global-menu__item:hover {
+  color: #f6a800; }
+
+.global-menu__item.is-opened {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+  pointer-events: auto;
+  transition-timing-function: ease; }
+
+.global-menu__item:nth-of-type(1) {
+  transition-delay: 0s; }
+
+.global-menu__item.is-opened:nth-of-type(1) {
+  transition-delay: 0.85s; }
+
+.global-menu__item:nth-of-type(2) {
+  transition-delay: 0.05s; }
+
+.global-menu__item.is-opened:nth-of-type(2) {
+  transition-delay: 0.8s; }
+
+.global-menu__item:nth-of-type(3) {
+  transition-delay: 0.1s; }
+
+.global-menu__item.is-opened:nth-of-type(3) {
+  transition-delay: 0.75s; }
+
+.global-menu__item:nth-of-type(4) {
+  transition-delay: 0.15s; }
+
+.global-menu__item.is-opened:nth-of-type(4) {
+  transition-delay: 0.7s; }
+
+@keyframes intervalHamburgerBorder {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  80% {
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6); } }
+
+.hamburger {
+  width: 64px;
+  height: 64px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  z-index: 110;
+  border-radius: 50%;
+  background-color: transparent;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+.hamburger::after {
+  width: 64px;
+  height: 64px;
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border: 2px solid #369ba1;
+  border-radius: 50%;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-name: intervalHamburgerBorder;
+  animation-name: intervalHamburgerBorder;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.hamburger__line {
+  width: 28px;
+  height: 2px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10; }
+
+.hamburger__line-in {
+  width: 84px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.hamburger__line-in::before,
+.hamburger__line-in::after {
+  width: 28px;
+  height: 2px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: #369ba1; }
+
+.hamburger__line-in::before {
+  left: -56px; }
+
+.hamburger__line-in::after {
+  left: 0; }
+
+.hamburger__line--01,
+.hamburger__line--02,
+.hamburger__line--03,
+.hamburger__line--cross01,
+.hamburger__line--cross02 {
+  left: 18px; }
+
+.hamburger__line--01 {
+  top: 24.6px; }
+
+.hamburger__line--02,
+.hamburger__line--cross01,
+.hamburger__line--cross02 {
+  top: 31px; }
+
+.hamburger__line--03 {
+  top: 37.4px; }
+
+.hamburger__line--cross01 {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.hamburger__line--cross02 {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.hamburger__line {
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+
+.hamburger__line-in {
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+
+.hamburger__line-in::before,
+.hamburger__line-in::after {
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform; }
+
+.hamburger__line-in--cross01,
+.hamburger__line-in--cross02 {
+  -webkit-transform: translateX(-33.3%);
+  transform: translateX(-33.3%); }
+
+.hamburger__line-in--01 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
+
+.hamburger__line-in--02 {
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s; }
+
+.hamburger__line-in--02::before,
+.hamburger__line-in--02::after {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s; }
+
+.hamburger__line-in--03 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s; }
+
+.hamburger__line-in--03::before,
+.hamburger__line-in--03::after {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s; }
+
+.hamburger__line-in--cross01 {
+  -webkit-transition-delay: 0.0s;
+  transition-delay: 0.0s; }
+
+.hamburger__line-in--cross02 {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s; }
+
+.hamburger__line-in--cross02::before,
+.hamburger__line-in--cross02::after {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s; }
+
+.hamburger.is-opened-navi .hamburger__line-in--01,
+.hamburger.is-opened-navi .hamburger__line-in--02,
+.hamburger.is-opened-navi .hamburger__line-in--03 {
+  -webkit-transform: translateX(33.3%);
+  transform: translateX(33.3%); }
+
+.hamburger.is-opened-navi .hamburger__line-in--cross01,
+.hamburger.is-opened-navi .hamburger__line-in--cross02 {
+  -webkit-transform: translateX(0);
+  transform: translateX(0); }
+
+.hamburger.is-opened-navi .hamburger__line-in--01 {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+
+.hamburger.is-opened-navi .hamburger__line-in--02 {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s; }
+
+.hamburger.is-opened-navi .hamburger__line-in--03 {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s; }
+
+.hamburger.is-opened-navi .hamburger__line-in--cross01 {
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s; }
+
+.hamburger.is-opened-navi .hamburger__line-in--cross02 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s; }
+
+.hamburger:hover .hamburger__line-in::before,
+.hamburger:hover .hamburger__line-in::after {
+  -webkit-transform: translateX(200%);
+  transform: translateX(200%); }
+
+.hamburger:hover .hamburger__line-in--01::before,
+.hamburger:hover .hamburger__line-in--01::after,
+.hamburger:hover .hamburger__line-in--02::before,
+.hamburger:hover .hamburger__line-in--02::after,
+.hamburger:hover .hamburger__line-in--03::before,
+.hamburger:hover .hamburger__line-in--03::after {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s; }
+
+.hamburger:hover .hamburger__line-in--cross01::before,
+.hamburger:hover .hamburger__line-in--cross01::after,
+.hamburger:hover .hamburger__line-in--cross02::before,
+.hamburger:hover .hamburger__line-in--cross02::after {
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s; }
+
+.hamburger.is-opened-navi:hover .hamburger__line-in--cross01::before,
+.hamburger.is-opened-navi:hover .hamburger__line-in--cross01::after,
+.hamburger.is-opened-navi:hover .hamburger__line-in--cross02::before,
+.hamburger.is-opened-navi:hover .hamburger__line-in--cross02::after {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s; }
+
+.hamburger.is-opened-navi:hover .hamburger__line-in--01::before,
+.hamburger.is-opened-navi:hover .hamburger__line-in--01::after,
+.hamburger.is-opened-navi:hover .hamburger__line-in--02::before,
+.hamburger.is-opened-navi:hover .hamburger__line-in--02::after,
+.hamburger.is-opened-navi:hover .hamburger__line-in--03::before,
+.hamburger.is-opened-navi:hover .hamburger__line-in--03::after {
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s; }
+
+@media screen and (min-width: 55em) {
+  .demos {
+    display: flex;
+    padding-right: 80px;
+    justify-self: end; }
+  .demo {
+    display: block;
+    width: 17px;
+    height: 17px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background: #79272b; }
+  a.demo--current {
+    background: #369ba1; }
+  .demo span {
+    position: absolute;
+    line-height: 1;
+    right: 100%;
+    display: none;
+    margin: 0 1em 0 0; }
+  .demo--current span {
+    display: block; } }
+
+@media screen and (max-width: 55em) {
+  .hamburger {
+    position: fixed;
+    top: 0.5em;
+    right: 0.5em;
+    transform: scale(0.75); } }
+
+/* 
+        *
+        *   Breakpoints for all devices listed here...
+        *
+        *   $breakpoint-small = 540px
+        *   $breakpoint-med = 720px
+        *   $breakpoint-large = 960px
+        *
+*/
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 80%;
+    max-width: 140rem; }
+  .hero--glyphs img {
+    margin: 0 1.5rem;
+    height: 9.5rem; }
+  .hero--title h1 {
+    font-size: 15rem;
+    line-height: 1.3; }
+  .hero--title h3 {
+    font-size: 2.8rem;
+    line-height: 1.5; } }
+
+/* 
+        *
+        *   Breakpoints for all devices listed here...
+        *
+        *   $breakpoint-small = 540px
+        *   $breakpoint-med = 720px
+        *   $breakpoint-large = 960px
+        *
+*/
+/* 
+        *
+        *   Breakpoints for all devices listed here...
+        *
+        *   $breakpoint-small = 540px
+        *   $breakpoint-med = 720px
+        *   $breakpoint-large = 960px
+        *
+*/
+@media only screen and (min-width: 540px) {
+  .container {
+    width: 80%; }
+  .hero--glyphs img {
+    margin: 0 1.5rem;
+    height: 9.5rem; }
+  .hero--title h1 {
+    font-size: 10rem;
+    margin: 0; }
+  .hero--title h3 {
+    font-size: 2rem;
+    margin: 1.5rem 0; }
+  .hero--title small {
+    font-size: 1.5rem;
+    margin: 0; } }
