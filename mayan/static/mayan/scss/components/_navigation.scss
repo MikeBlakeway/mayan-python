@@ -1,6 +1,5 @@
 .logo {
     height: 5rem;
-    margin-top: 2rem;
     fill: $teal;
     transform: translateY(150%);
     animation: logo-color 0.95s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards;
@@ -8,6 +7,10 @@
 
     &-wrapper {
         overflow: hidden;
+
+        a {
+            height: 100%;
+        }
     }
 }
 
@@ -18,7 +21,9 @@
     top: 0;
     z-index: 99;
     transition: all 0.5s ease;
-    padding: 5px 80px;
+    padding: 10px 80px;
+    background-color: $white;
+    opacity: .9;
 }
 
 .navbar {

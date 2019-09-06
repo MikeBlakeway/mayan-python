@@ -1,0 +1,9 @@
+.contact-link {
+    color: $red;
+    font-weight: 500;
+    font-size: 2rem;
+
+    &:hover {
+        font-weight: 700;
+    }
+}

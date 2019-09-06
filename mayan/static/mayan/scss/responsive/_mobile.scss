@@ -8,6 +8,23 @@
         *
 */
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: $breakpoint-small) {
+    .mobile {
+
+        &-hidden {
+            display: auto;
+        }
+    }
+
+    .desktop {
+
+        &-hidden {
+            display: none;
+        }
+    }
+}
+
 
 @media only screen and (max-width: $breakpoint-small) {
 
@@ -51,6 +68,24 @@
         margin: 0;
     }
 
+    .mobile-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .contact-button {
+            margin: 2rem 0;
+            padding: 1.5rem 4rem;
+            background: $teal;
+            color: white;
+            font-size: 1.8rem;
+            font-family: $font-title;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
 
     #page>div>h1 {
         letter-spacing: 0;
@@ -123,7 +158,6 @@
         }
 
         &-inline {
-            display: inline-flex;
             margin-left: 2rem;
 
             &--title {
@@ -144,12 +178,13 @@
 
     // -- Contact Form
     .message-container {
-        height: 6rem;
-        margin: 0;
+        // height: 6rem;
+        margin-top: 2.5rem;
 
-        textarea {
-            padding-top: 1rem;
-        }
+
+        // textarea {
+        //     padding-top: 1rem;
+        // }
     }
 
     // END Icons
@@ -168,6 +203,11 @@
     }
 
     // END Vendors
+
+
+    .desktop-hidden {
+        display: auto;
+    }
 
     // END
 }

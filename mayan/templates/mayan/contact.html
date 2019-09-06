@@ -20,8 +20,16 @@
             <h3 class="icons-inline--title">CONTACT
                 {% include './components/icons_inline.html' %}
             </h3>
-            <p class="mb-5">07738 151 767</p>
-            <p class="mb-5">hello@mayanwebstudio.co.uk</p>
+            <p class="mb-5 mobile-hidden">
+            <a href="tel:+447738151767" class="contact-link">07738 151 767</a>
+            </p>
+            <p class="mb-5 mobile-hidden">
+            <a href="mailto:hello@mayanwebstudio.co.uk" class="contact-link">hello@mayanwebstudio.co.uk</a>
+            </p>
+            <div class="mobile-contact desktop-hidden">
+                <a class="contact-button large-hidden" href="tel:+447738151767">Call Now</a>
+                <a class="contact-button large-hidden" href="mailto:hello@mayanwebstudio.co.uk">email now</a>
+            </div>
         </div>
         <div class="col-md-6">
             <form class="form-container" method="POST" action='/contact/'>
