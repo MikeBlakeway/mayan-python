@@ -1,84 +1,107 @@
-{% extends './mayan_base.html' %}
-{% load static %}
-
-{% block head %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
-{% endblock head %}
-
-{% block content %}
+{% extends './mayan_base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+/>
+{% endblock head %} {% block content %}
 <section id="page" class="container">
-    {% include './components/glyphs.html' %}
-    <div class="row">
-        <small class="text-center block mt-3 mb-1">MAYAN STUDIO</small>
-        <h1 class="text-center block mb-2">WEBSITE PACKAGES</h1>
+  {% include './components/glyphs.html' %}
+  <div class="row">
+    <small class="text-center block mt-3 mb-1">MAYAN STUDIO</small>
+    <h1 class="text-center block mb-2">WEBSITE PACKAGES</h1>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 lead mb-4">
+      <p>
+        We all like structure don’t we? Getting the most for our money is an
+        important part of any deal we consider taking seriously. Websites can be
+        awkward to find a common price for. Nonetheless, we strive to make
+        things as clear as possible here at Mayan Web Studio.
+      </p>
+      <div class="hero--button">
+        <button id="left">
+          <a>View our services</a>
+        </button>
+        <span class="arrow-right">
+          <span></span>
+        </span>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-md-6 lead mb-4">
-            <p>We all like structure don’t we? Getting the most for our money is an important part of any deal we
-                consider taking seriously. Websites can be awkward to find a common price for. Nonetheless, we strive to
-                make things as clear as possible here at Mayan Web Studio.</p>
-            <div class="hero--button">
-                <button id="left">
-                    <a>View our services</a>
-                </button>
-                <span class="arrow-right">
-                    <span></span>
-                </span>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-6">
-            <p class="copy">We all like structure don’t we? Getting the most for our money is an important part of
-                any deal we consider taking seriously.</p>
-            <p class="copy">Websites can be awkward to find a common price for, so it’s pretty typical of most
-                development teams to quote based on your requirements rather than offering something ‘off the
-                shelf’.</p>
-            <p class="copy">Nonetheless, we strive to make things as clear as possible here at Mayan Web Studio so
-                putting together a solid guide as to just how much your budget is going to get you seemed only
-                right.</p>
-        </div>
+    <div class="col-xs-12 col-md-6">
+      <p class="copy">
+        We all like structure don’t we? Getting the most for our money is an
+        important part of any deal we consider taking seriously.
+      </p>
+      <p class="copy">
+        Websites can be awkward to find a common price for, so it’s pretty
+        typical of most development teams to quote based on your requirements
+        rather than offering something ‘off the shelf’.
+      </p>
+      <p class="copy">
+        Nonetheless, we strive to make things as clear as possible here at Mayan
+        Web Studio so putting together a solid guide as to just how much your
+        budget is going to get you seemed only right.
+      </p>
     </div>
-    <div class="row">
-        <div>
-            <h3 class="icons-inline--title">PACKAGES
-                {% include './components/icons_inline.html' %}
-            </h3>
-            <p class="mb-5">{% lorem 2 b random %}</p>
-        </div>
+  </div>
+  <div class="row">
+    <div>
+      <h3 class="icons-inline--title">
+        PACKAGES {% include './components/icons_inline.html' %}
+      </h3>
+      <p class="mb-5">
+        Mayan Web Studio has a range of 'off the shelf' packagaes to choose
+        from. We would always encourage potential clients to reach out to us in
+        the first instance so that we can discuss your project as, in many
+        cases, the package you are looking for may not be the most appropriate
+        to meet your needs. It's important to understand that each new site is
+        different from the last, so getting the most out of your budget is not
+        always as easy as just picking a package and expecting the rest to take
+        care of itself! Most importantly, when it comes to web design and web
+        development for small to medium sized businesses, you should consider
+        what you are hoping to achieve first and then speak to a proffessional
+        web developer about just what sort of work is involved in achieving that
+        goal. You may be suprised to learn just how easy or difficult particular
+        web functionality might be. Nonetheless, here are the guidelines for a
+        typical website project and some of the reasons as to why they are
+        scaled that way.
+      </p>
     </div>
-    {% include './components/slick_carousel.html' %}
-
+  </div>
+  {% include './components/slick_carousel.html' %}
 </section>
-{% endblock content %}
-
-{% block scripts %}
+{% endblock content %} {% block scripts %}
 
 <script>
-    var link = "{% url 'services' %}";
+  var link = "{% url 'services' %}";
 </script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('.slider-nav').slick({
-            dots: true,
-            lazyLoad: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            cssEase: "ease-in-out",
-            asNavFor: '.slider-for',
-            cssEase: "ease-in-out",
-        });
-        $('.slider-for').slick({
-            infinite: true,
-            speed: 800,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            cssEase: "ease-in-out",
-            arrows: false
-        });
+  $(document).ready(function() {
+    $(".slider-nav").slick({
+      dots: true,
+      lazyLoad: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      cssEase: "ease-in-out",
+      asNavFor: ".slider-for",
+      cssEase: "ease-in-out"
     });
+    $(".slider-for").slick({
+      infinite: true,
+      speed: 800,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      cssEase: "ease-in-out",
+      arrows: false
+    });
+  });
 </script>
 
 {% endblock scripts %}
