@@ -9,13 +9,12 @@
         <meta name=description content="description here">
         <title>Mayan Web Studio</title>
         <link rel="stylesheet" href="{% static "mayan/css/main.css" %}" type="text/css">
+        {% block head %}
+        {% endblock head %}
     </head>
 
     <body>
         {% include './components/header.html' %}
-        {% comment %} {% include './components/header.html' %} {% endcomment %}
-        {% block head %}
-        {% endblock head %}
         {% include './components/transitions.html' %}
             
         <main id="App">

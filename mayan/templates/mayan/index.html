@@ -1,36 +1,33 @@
-{% extends 'mayan/mayan_base.html' %}
-{% load static %}
+{% extends './mayan_base.html' %} {% load static %} 
 
 {% block content %}
+
 <section class="hero" id="page">
-    <div class="hero--title">
-        <div class="hero--glyphs">
-            <img src="{% static 'mayan/svg/glyph_one.svg' %}" alt="Glyph One" />
-            <img src="{% static 'mayan/svg/glyph_two.svg' %}" alt="Glyph Two" />
-            <img src="{% static 'mayan/svg/glyph_three.svg' %}" alt="Glyph Three" />
-        </div>
-
-        <h1>MAYAN</h1>
-        <h3>Website Design &amp; Development Studio</h3>
-        <small>Bespoke Online Solutions For SME’s &amp; Sole Traders</small>
-
-        <div class="hero--button">
-            <button id="left">
-                <a>
-                Let's Go!
-                <span class="arrow-right">
-                <span></span>
-            </span>
-                </a>
-            </button>
-            
-        </div>
+  <div class="hero--title">
+    <div class="hero--glyphs">
+      <img src="{% static 'mayan/svg/glyph_one.svg' %}" alt="Glyph One" />
+      <img src="{% static 'mayan/svg/glyph_two.svg' %}" alt="Glyph Two" />
+      <img src="{% static 'mayan/svg/glyph_three.svg' %}" alt="Glyph Three" />
     </div>
-</section>
-{% endblock content %}
 
-{% block scripts %}
+    <h1>MAYAN</h1>
+    <h3>Website Design &amp; Development Studio</h3>
+    <small>Bespoke Online Solutions For SME’s &amp; Sole Traders</small>
+
+    <div class="hero--button">
+      <button id="left">
+        <a>
+          Let's Go!
+          <span class="arrow-right">
+            <span></span>
+          </span>
+        </a>
+      </button>
+    </div>
+  </div>
+</section>
+{% endblock content %} {% block scripts %}
 <script>
-    var link = "{% url 'about' %}";
+  var link = "{% url 'about' %}";
 </script>
 {% endblock scripts %}

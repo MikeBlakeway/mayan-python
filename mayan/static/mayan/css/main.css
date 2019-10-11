@@ -538,10 +538,11 @@ p {
   height: 5rem;
   fill: #369ba1;
   transform: translateY(150%);
+  opacity: 0;
   animation: logo-color 0.95s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s forwards;
   transition: all 0.35s ease-out; }
   .logo-wrapper {
-    overflow: hidden; }
+    display: flex; }
     .logo-wrapper a {
       height: 100%; }
 
@@ -2397,11 +2398,14 @@ input:-webkit-autofill {
 
 @keyframes logo-color {
   0% {
-    transform: translateY(150%) scale(0.6); }
-  25% {
-    transform: translateY(150%) scale(0.6); }
+    transform: translateY(150%) scale(0.6);
+    opacity: 0;
+  }
+
   100% {
-    transform: translateY(5%) scale(0.8); } }
+    transform: translateY(5%) scale(0.8);
+    opacity: 1;
+  } }
 
 @keyframes fadeIn {
   from {
@@ -2506,13 +2510,14 @@ input:-webkit-autofill {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 3vmax;
+  line-height: 4vmax;
   font-weight: 700;
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(-100%);
   pointer-events: none;
   display: block;
-  margin: 0.25em 0;
+  margin: 1rem 0;
   transition: transform 0.3s, opacity 0.3s;
   transition-timing-function: ease-in; }
 
@@ -2568,9 +2573,7 @@ input:-webkit-autofill {
   display: block;
   position: relative;
   cursor: pointer;
-  position: absolute;
-  top: 2rem;
-  right: 4rem;
+  margin-left: auto;
   z-index: 110;
   border-radius: 50%;
   background-color: transparent;
