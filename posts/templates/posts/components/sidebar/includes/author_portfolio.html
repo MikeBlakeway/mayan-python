@@ -1,6 +1,7 @@
 {% load static %}
 
 <!-- Author Portfolio -->
+{% for author in authors %}
   <div class="single-widget portfolio-widget">
     <img
       class="img-fluid"
@@ -8,15 +9,13 @@
       alt=""
     />
     <a href="#">
-      <h4>Charlie ALison Barber</h4>
+      <h4>{{ author.user.get_full_name }}</h4>
     </a>
     <div class="desigmation">
-      <p>Senior blog writer</p>
+      <p>{{ author.job_role }}</p>
     </div>
     <p>
-      Boot camps have its supporters andit sdetractors. Some people do not
-      understand why you should have to spend money on boot camp whenyou can
-      get. Boot camps have itssuppor ters andits detractors.
+      {{ author.author_bio }}
     </p>
     <ul>
       <li>
@@ -33,4 +32,6 @@
       </li>
     </ul>
   </div>
+{% endfor %}
+  
   <!-- End Author Portfolio -->
