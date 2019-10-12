@@ -6,6 +6,21 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
+class SocialMedia(models.Model):
+
+    # Fields -->
+    facebook_url = models.URLField(default='')
+    facebook_icon = models.TextField(default='fa fa-facebook')
+    instagram_url = models.URLField(default='')
+    instagram_icon = models.TextField(default='fa fa-instagram')
+    dribble_url = models.URLField(default='')
+    dribble_icon = models.TextField(default='fa fa-dribble')
+    linkdin_url = models.URLField(default='')
+    linkdin_icon = models.TextField(default='fa fa-linkdin')
+    github_url = models.URLField(default='')
+    github_icon = models.TextField(default='fa fa-github')
+
+
 class Author(models.Model):
 
     # Choices -->
@@ -23,6 +38,13 @@ class Author(models.Model):
     # Fields -->
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_image = models.ImageField()
+
+    facebook_url = models.URLField(default='')
+    instagram_url = models.URLField(default='')
+    dribble_url = models.URLField(default='')
+    linkdin_url = models.URLField(default='')
+    github_url = models.URLField(default='')
+
     author_bio = models.TextField(max_length=300, default='')
     job_role = models.CharField(max_length=50,
                                 choices=JOB_ROLES,
@@ -61,6 +83,7 @@ class Post(models.Model):
     categories = models.ManyToManyField(Category)
     comment_count = models.IntegerField(default=0)
     featured = models.BooleanField()
+    published = models.BooleanField(default=False)
 
     # Self -->
     def __str__(self):

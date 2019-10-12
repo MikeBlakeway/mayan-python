@@ -5,7 +5,7 @@
   <div class="single-widget portfolio-widget">
     <img
       class="img-fluid"
-      src="{% static 'posts/img/blog/user2.png'%}"
+      src="{{ author.profile_image.url }}"
       alt=""
     />
     <a href="#">
@@ -18,18 +18,33 @@
       {{ author.author_bio }}
     </p>
     <ul>
-      <li>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-behance"></i></a>
-      </li>
+
+      {% if author.facebook_url %}
+        <li>
+          <a href="{{ author.facebook_url }}"><i class="fa fa-facebook"></i></a>
+        </li>
+      {% endif %}
+      {% if author.instagram_url %}
+        <li>
+          <a href="{{ author.instagram_url }}"><i class="fa fa-instagram"></i></a>
+        </li>
+      {% endif %}
+      {% if author.dribble_url %}
+        <li>
+          <a href="{{ author.dribble_url }}"><i class="fa fa-dribbble"></i></a>
+        </li>
+      {% endif %}
+      {% if author.linkdin_url %}
+        <li>
+          <a href="{{ author.linkdin_url }}"><i class="fa fa-linkedin-square"></i></a>
+        </li>
+      {% endif %}
+      {% if author.github_url %}
+        <li>
+          <a href="{{ author.github_url }}"><i class="fa fa-github"></i></a>
+        </li>
+      {% endif %}
+
     </ul>
   </div>
 {% endfor %}

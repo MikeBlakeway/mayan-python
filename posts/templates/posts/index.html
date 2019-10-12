@@ -17,13 +17,13 @@
 
 <!-- Start banner Area -->
 <section class="banner-area">
-  <div class="container box_1170">
+  <div class="container">
     <div
-      class="row fullscreen d-flex align-items-center justify-content-center"
+      class="row d-flex no-margin section-gap align-items-center justify-content-center"
     >
       <div class="banner-content text-center col-lg-8">
         {% include '../mayan/components/glyphs.html' %}
-        <div class="row">
+        <div class="row no-margin">
           <small class="text-center block mt-3 mb-1">MAYAN STUDIO</small>
           <h1 class="text-center block mb-2">WELCOME TO A BRAVE NEW WORLD</h1>
         </div>
@@ -33,22 +33,18 @@
 </section>
 <!-- End banner Area -->
 
-<!-- Start Post Silder Area -->
-<!-- {% include './components/post-slider.html'%} -->
-<!-- Start Post Silder Area -->
-
 <!-- Start main body Area -->
 <div class="main-body section-gap mt--30">
-  <div class="container box_1170">
-    <div class="row">
+  <div class="container">
+    <div class="row no-margin">
 
         <!-- Start Featured Posts -->
       <div class="col-lg-8 post-list">
         <section class="post-area">
-
+          <h1 class="title pb-30" style="color: #369ba1;">Latest Posts</h1>
           <!-- Start Post Loop -->
           {% for post in posts %}
-          {% include './components/featured.html' %}
+              {% include './components/latest_posts.html' %}
           {% endfor %}
           <!-- End Post Loop -->
 
