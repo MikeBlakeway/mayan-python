@@ -62,11 +62,13 @@ class Category(models.Model):
     icon = models.TextField()
 
     # Meta -->
+
     class Meta:
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
 
-    # Self -->
+
+            # Self -->
     def __str__(self):
         return self.title
 
