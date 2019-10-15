@@ -1,0 +1,42 @@
+{% load static %}
+<html>
+
+    
+        {% include 'mayan/head.html' %}
+        {% block head %}
+
+            <link
+            href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500"
+            rel="stylesheet"
+            />
+            <link rel="stylesheet" href="{% static 'posts/css/linearicons.css' %}" />
+            <link rel="stylesheet" href="{% static 'posts/css/font-awesome.min.css' %}" />
+            <link rel="stylesheet" href="{% static 'posts/css/bootstrap.css' %}" />
+            <link rel="stylesheet" href="{% static 'posts/css/magnific-popup.css' %}" />
+            <link rel="stylesheet" href="{% static 'posts/css/nice-select.css' %}" />
+            <link rel="stylesheet" href="{% static 'posts/css/animate.min.css' %}" />
+            <link rel="stylesheet" href="{% static 'posts/css/owl.carousel.css' %}" />
+            <link rel="stylesheet" href="{% static 'posts/css/main.css' %}" />
+
+        {% endblock head %}
+
+    <body>
+        {% include 'mayan/components/header.html' %}
+        {% include 'mayan/components/transitions.html' %}
+            
+        <main id="App">
+            {% block content %}
+            {% endblock content %}
+        </main>
+
+
+        
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        {% block scripts %}
+        {% endblock scripts %}
+        <script type="text/javascript" src="{% static "mayan/js/navigation.js" %}"></script>
+        <script type="text/javascript" src="{% static "mayan/js/transitions.js" %}"></script>
+    </body>
+
+</html>

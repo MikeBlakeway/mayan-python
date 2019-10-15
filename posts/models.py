@@ -1,5 +1,6 @@
 from django.db import models
 
+from ckeditor.fields import RichTextField
 from django.contrib.auth import get_user_model
 
 
@@ -67,8 +68,7 @@ class Category(models.Model):
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
 
-
-            # Self -->
+        # Self -->
     def __str__(self):
         return self.title
 
@@ -78,8 +78,7 @@ class Post(models.Model):
     # Fields -->
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    snippet = models.TextField()
-    body = models.TextField()
+    body = RichTextField()
     thumbnail = models.ImageField()
     created_date = models.DateTimeField(auto_now_add=True)
     categories = models.ManyToManyField(Category)

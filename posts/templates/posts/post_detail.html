@@ -1,0 +1,170 @@
+{% extends './base.html' %}
+
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+<style>
+
+.main_blog_details .post--title {
+    color: #79272b;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-size: 36px;
+    margin: 3.5rem 0;
+    font-weight: 500;
+}
+    .main_blog_details h3, .main_blog_details h4 {
+        color: #369ba1;
+        margin: 2.5rem 0;
+        font-weight: 300;
+        font-size: 1.8rem;
+    }
+
+    .main_blog_details h2 {
+        color: #79272b;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        font-size: 2.2rem;
+        margin: 3.5rem 0;
+    }
+    
+    .main_blog_details p {
+        font-family: "Quicksand", sans-serif;
+        color: #464646;
+        line-height: 1.5;
+        font-size: 1.5rem;
+    }
+</style>
+
+  <!-- Blog Area -->
+    <section class="blog_area single-post-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                
+                    <div class="main_blog_details">
+                        <img class="img-fluid" src="{{ post.thumbnail.url }}" alt="">            
+                        <h4 class="post--title">{{ post.title }}</h4>
+                        <div class="user_details">
+                            <div class="float-left">
+                            {% for category in post.categories.all %}
+                                <a href="#">{{ category.title }}</a>
+                                {% endfor %}
+                            </div>
+                            <div class="float-right">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <h5>{{ post.author.user.get_full_name | upper }}</h5>
+                                        <p>{{ post.created_date | naturaltime }}</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img class="author--profile__image" src="{{ post.author.profile_image.url }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ post.body | safe }}
+                        <div class="news_d_footer">
+                            <a href="#">
+                                <i class="lnr lnr lnr-bubble"></i>{{ post.comment_count }} Comments
+                            </a>
+                            <div class="news_socail ml-auto d-flex">
+                                {% if post.author.facebook_url %}
+                                    <li>
+                                    <a href="{{ post.author.facebook_url }}"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                {% endif %}
+                                {% if post.author.instagram_url %}
+                                    <li>
+                                    <a href="{{ post.author.instagram_url }}"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                {% endif %}
+                                {% if post.author.dribble_url %}
+                                    <li>
+                                    <a href="{{ post.author.dribble_url }}"><i class="fa fa-dribbble"></i></a>
+                                    </li>
+                                {% endif %}
+                                {% if post.author.linkdin_url %}
+                                    <li>
+                                    <a href="{{ post.author.linkdin_url }}"><i class="fa fa-linkedin-square"></i></a>
+                                    </li>
+                                {% endif %}
+                                {% if post.author.github_url %}
+                                    <li>
+                                    <a href="{{ post.author.github_url }}"><i class="fa fa-github"></i></a>
+                                    </li>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation-area">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                                {% comment %} <div class="thumb">
+                                    <a href="/posts/{{ post.get_previous_by_created_date.id }}"><img class="img-fluid" src="img/blog/prev.jpg" alt=""></a>
+                                </div>
+                                <div class="arrow">
+                                    <a href="/posts/{{ post.get_previous_by_created_date.id }}"><span class="lnr lnr-arrow-left"></span></a>
+                                </div> {% endcomment %}
+                                <div class="detials">
+                                    <p>Prev Post</p>
+                                    <a href="/posts/{{ post.get_previous_by_created_date.id }}">
+                                        <h4>{{ post.get_previous_by_created_date.title }}</h4>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                                <div class="detials">
+                                    <p>Next Post</p>
+                                    <a href="/posts/{{ post.get_next_by_created_date.id }}">
+                                        <h4>{{ post.get_next_by_created_date.title }}</h4>
+                                    </a>
+                                </div>
+                                {% comment %} <div class="arrow">
+                                    <a href="/posts/{{ post.get_next_by_created_date.id }}"><span class="lnr lnr-arrow-right"></span></a>
+                                </div>
+                                <div class="thumb">
+                                    <a href="/posts/{{ post.get_next_by_created_date.id }}"><img class="img-fluid" src="img/blog/next.jpg" alt=""></a>
+                                </div> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+
+                    {% comment %} <div class="navigation-area">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                                <div class="arrow">
+                                    <a href="#"><span class="lnr lnr-arrow-left"></span></a>
+                                </div>
+                                <div class="detials">
+                                    <p>Prev Post</p>
+                                    <a href="/posts/{{ post.get_previous_by_created_date.id }}">
+                                        <h4>{{ post.get_previous_by_created_date.title }}</h4>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                                <div class="arrow">
+                                    <a href="#"><span class="lnr lnr-arrow-right"></span></a>
+                                </div>
+                                <div class="detials">
+                                    <p>Next Post</p>
+                                    <a href="/posts/{{ post.get_next_by_created_date.id }}">
+                                        <h4>{{ post.get_next_by_created_date.title }}</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+                {% include './components/sidebar/sidebar.html' %}
+            </div>
+        </div>
+    </section>
+    <!-- Blog Area -->
+
+{% endblock content %}
