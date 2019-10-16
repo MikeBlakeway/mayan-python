@@ -124,44 +124,11 @@
                                         <h4>{{ post.get_next_by_created_date.title }}</h4>
                                     </a>
                                 </div>
-                                {% comment %} <div class="arrow">
-                                    <a href="/posts/{{ post.get_next_by_created_date.id }}"><span class="lnr lnr-arrow-right"></span></a>
-                                </div>
-                                <div class="thumb">
-                                    <a href="/posts/{{ post.get_next_by_created_date.id }}"><img class="img-fluid" src="img/blog/next.jpg" alt=""></a>
-                                </div> {% endcomment %}
                             </div>
                         </div>
                     </div>
-
-                    {% comment %} <div class="navigation-area">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                                <div class="arrow">
-                                    <a href="#"><span class="lnr lnr-arrow-left"></span></a>
-                                </div>
-                                <div class="detials">
-                                    <p>Prev Post</p>
-                                    <a href="/posts/{{ post.get_previous_by_created_date.id }}">
-                                        <h4>{{ post.get_previous_by_created_date.title }}</h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-                                <div class="arrow">
-                                    <a href="#"><span class="lnr lnr-arrow-right"></span></a>
-                                </div>
-                                <div class="detials">
-                                    <p>Next Post</p>
-                                    <a href="/posts/{{ post.get_next_by_created_date.id }}">
-                                        <h4>{{ post.get_next_by_created_date.title }}</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> {% endcomment %}
                 </div>
-                {% include './components/sidebar/sidebar.html' %}
+                {% include './components/sidebar.html' %}
             </div>
         </div>
     </section>

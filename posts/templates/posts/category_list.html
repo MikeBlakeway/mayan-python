@@ -1,21 +1,4 @@
-{% extends 'mayan/mayan_base.html' %} {% load static %} 
-
-{% block head %}
-
-<link
-  href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500"
-  rel="stylesheet"
-/>
-<link rel="stylesheet" href="{% static 'posts/css/linearicons.css' %}" />
-<link rel="stylesheet" href="{% static 'posts/css/font-awesome.min.css' %}" />
-<link rel="stylesheet" href="{% static 'posts/css/bootstrap.css' %}" />
-<link rel="stylesheet" href="{% static 'posts/css/magnific-popup.css' %}" />
-<link rel="stylesheet" href="{% static 'posts/css/nice-select.css' %}" />
-<link rel="stylesheet" href="{% static 'posts/css/animate.min.css' %}" />
-<link rel="stylesheet" href="{% static 'posts/css/owl.carousel.css' %}" />
-<link rel="stylesheet" href="{% static 'posts/css/main.css' %}" />
-
-{% endblock head %}
+{% extends './base.html' %} {% load static %} 
 
 {% block content %}
 
@@ -50,7 +33,7 @@
 							<div class="col-lg-6 col-md-6">
 								<div class="single-post-item short">
 									<figure>
-										<img class="post-img img-fluid" src="img/category/c1.jpg" alt="">
+										<img class="post-img img-fluid" src="{% static 'posts/img/category/c1.jpg' %}" alt="">
 									</figure>
 									<h3>
 										<a href="blog-details.html">It’s hurricane season but we are
@@ -100,7 +83,7 @@
 
 
 				<!-- Sidebar -->
-				{% include './components/sidebar/sidebar.html'%}
+				{% include './components/sidebar.html'%}
 				<!-- End Sidebar -->
 			</div>
 		</div>
@@ -108,24 +91,3 @@
 	<!-- Start main body Area -->
 
 	{% endblock content %}
-
-	{% block scripts %}
-
-<script src="{% static 'posts/js/vendor/jquery-2.2.4.min.js' %} "></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"
-></script>
-<script src="{% static 'posts/js/vendor/bootstrap.min.js' %}"></script>
-<script src="{% static 'posts/js/easing.min.js' %} "></script>
-<script src="{% static 'posts/js/hoverIntent.js' %} "></script>
-<script src="{% static 'posts/js/superfish.min.js' %} "></script>
-<script src="{% static 'posts/js/jquery.ajaxchimp.min.js' %} "></script>
-<script src="{% static 'posts/js/jquery.magnific-popup.min.js' %} "></script>
-<script src="{% static 'posts/js/owl.carousel.min.js' %} "></script>
-<script src="{% static 'posts/js/jquery.nice-select.min.js' %} "></script>
-<script src="{% static 'posts/js/waypoints.min.js' %} "></script>
-<script src="{% static 'posts/js/mail-script.js' %} "></script>
-<script src="{% static 'posts/js/main.js' %} "></script>
-{% endblock scripts %}

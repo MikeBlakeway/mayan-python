@@ -1,0 +1,162 @@
+{% load humanize %}
+{% load static %}
+
+<div class="col-lg-4 sidebar">
+
+
+<!-- Search Bar -->
+  <div class="single-widget search-widget">
+    <form class="example" action="#" style="margin:auto;max-width:300px">
+      <input type="text" placeholder="Search Posts" name="search2" />
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+<!-- End Search Bar -->
+
+
+<!-- Author Portfolio -->
+{% for author in authors %}
+  <div class="single-widget portfolio-widget">
+    <img
+      class="img-fluid"
+      src="{{ author.profile_image.url }}"
+      alt=""
+    />
+    <a href="#">
+      <h4>{{ author.user.get_full_name }}</h4>
+    </a>
+    <div class="desigmation">
+      <p>{{ author.job_role }}</p>
+    </div>
+    <p>
+      {{ author.author_bio }}
+    </p>
+    <ul>
+
+      {% if author.facebook_url %}
+        <li>
+          <a href="{{ author.facebook_url }}"><i class="fa fa-facebook"></i></a>
+        </li>
+      {% endif %}
+      {% if author.instagram_url %}
+        <li>
+          <a href="{{ author.instagram_url }}"><i class="fa fa-instagram"></i></a>
+        </li>
+      {% endif %}
+      {% if author.dribble_url %}
+        <li>
+          <a href="{{ author.dribble_url }}"><i class="fa fa-dribbble"></i></a>
+        </li>
+      {% endif %}
+      {% if author.linkdin_url %}
+        <li>
+          <a href="{{ author.linkdin_url }}"><i class="fa fa-linkedin-square"></i></a>
+        </li>
+      {% endif %}
+      {% if author.github_url %}
+        <li>
+          <a href="{{ author.github_url }}"><i class="fa fa-github"></i></a>
+        </li>
+      {% endif %}
+
+    </ul>
+  </div>
+{% endfor %}
+  
+<!-- End Author Portfolio -->
+
+<!-- Latest Posts -->
+  
+    <div class="single-widget popular-posts-widget">
+      <h4 class="title">Popular Posts</h4>
+      <div class="blog-list ">
+        {% for post in featured %}
+            <div class="single-popular-post d-flex flex-column">
+              <div class="popular-thumb">
+                <img
+                  class="img-fluid"
+                  src="{{ post.thumbnail.url }}"
+                  alt=""
+                />
+              </div>
+              <div class="popular-details">
+                <a href={% url 'post-detail' pk=post.id %}>
+                  <h4>{{ post.title }}</h4>
+                </a>
+                <p class="text-uppercase">{{ post.created_date | naturaltime }}</p>
+              </div>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  
+  
+<!-- End Latest Posts -->
+
+
+<!-- Categories List -->
+  <div class="single-widget category-widget">
+    <h4 class="title">Post Categories</h4>
+    <ul>
+
+    {% for category in category_count %}
+      <li>
+        <!-- 
+          TODO: link categories to the categories template and display all posts that are linked to the chosen category.
+          -->
+        <a href="#" class="justify-content-between align-items-center d-flex">
+          <p>{{ category.categories__title }}</p>
+          <span>
+          {{ category.categories__count }}
+          </span>
+        </a>
+      </li>
+    {% endfor %}
+      
+      
+    </ul>
+  </div>
+<!-- End Categories List -->
+
+
+<!-- Newsletter Signup -->
+  <div class="single-widget newsletter-widget">
+    <h4 class="title">Newsletter</h4>
+    <div id="mc_embed_signup">
+      <form
+        target="_blank"
+        novalidate="true"
+        action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+        method="get"
+        class=""
+      >
+        <div class="form-group" style="width: 100%">
+          <input
+            name="EMAIL"
+            placeholder="Email Address"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Email Address '"
+            required=""
+            type="email"
+          />
+          <div style="position: absolute; left: -5000px;">
+            <input
+              name="b_36c4fd991d266f23781ded980_aefe40901a"
+              tabindex="-1"
+              value=""
+              type="text"
+            />
+          </div>
+
+          <button class="primary-btn text-uppercase">
+            Subscribe Now
+            <span class="lnr lnr-arrow-right"></span>
+          </button>
+        </div>
+        <div class="info"></div>
+      </form>
+    </div>
+  </div>
+<!-- End Newsletter Signup -->
+
+</div>
