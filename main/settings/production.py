@@ -11,14 +11,10 @@ ALLOWED_HOSTS = [
 ]
 
 
-INSTALLED_APPS += (
-    'whitenoise.runserver_nostatic',
-)
+# INSTALLED_APPS += (
+#     'whitenoise.runserver_nostatic',
+# )
 
-
-MIDDLEWARE += (
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-)
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -46,4 +42,4 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage
