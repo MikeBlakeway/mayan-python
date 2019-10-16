@@ -20,8 +20,8 @@ class PostListView(ListView):
     queryset = Post.objects.filter(published=True).order_by('-created_date')
     category_count = get_category_count()
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+    def get_context_data(self):
+        context = super().get_context_data()
         context['categories'] = Category.objects.all()
         context['category_count'] = self.category_count
         context['authors'] = Author.objects.all()
